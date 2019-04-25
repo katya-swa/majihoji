@@ -9,8 +9,10 @@
               <%= link_to item.user.name, user_path(item.user) %>
             </div>
             <div class="panel-body">
-              <%= image_tag item.picture.url if item.picture? %>
-              <%= item.content %>
+              <%= link_to(item_path(item)) do %>
+                <%= image_tag item.picture.url if item.picture? %>
+                <%= item.content %>
+              <% end %>
             </div>
           </div>
       <% end %>
