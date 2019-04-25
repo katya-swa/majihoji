@@ -7,8 +7,8 @@
         <h3>投稿一覧</h3>
         <ol class="items">
           <% @feed_items.each do |feed_item| %>
-            <div class="media">
-              <div class="media-body">
+            <div class="panel panel-default">
+              <div class="panel-body">
                 <%= render feed_item %>
               </div>
             </div>

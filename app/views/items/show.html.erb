@@ -1,2 +1,13 @@
-<%= @item.user.name %>
-<%= @item.content %>
+<div class="row">
+  <ol class="items">
+      <div class="media">
+        <a class="media-left" href="user_path(item.user)">
+          <%= @item.user.name %>
+        </a>
+        <div class="media-body">
+          <%= image_tag @item.picture.url if @item.picture? %>
+          <%= @item.content %>
+        </div>
+      </div>
+  </ol>
+</div>
