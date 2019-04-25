@@ -4,4 +4,5 @@ root 'pages#home'
   get  '/about',   to: 'pages#about'
   get '/users/:id', to: 'users#show', as: 'user'
   get '/users', to: 'users#index'
+  resources :items, only: %i(create destroy index show)
 end

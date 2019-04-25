@@ -1,0 +1,11 @@
+<%= form_for(@item) do |f| %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "...投稿したいアイテムの写真と紹介文を入れよう！" %>
+  </div>
+  <%= f.submit "投稿する", class: "btn btn-primary" %>
+  <br>
+  <br>
+  <span class="picture">
+    <%= f.file_field :picture %>
+  </span>
+<% end %>

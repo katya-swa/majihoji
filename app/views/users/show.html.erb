@@ -1,2 +1,26 @@
-<h1><%= @user.name%></h1>
-<h1><%= @user.email%></h1>
+<div class="container">
+  <div class="user_info">
+    <h3><%= @user.name %></h3>
+      <%= button_to '編集',edit_user_registration_path , method: :get, :class => "btn btn-primary" %>
+      <%= button_to '投稿する',root_path , method: :get, :class => "btn btn-primary" %>
+  </div>
+</div>
+
+  <% if @user.items.any? %>
+    <div class="row">
+      <ol class="items">
+        <% @user.items.each do |item| %>
+          <div class="media">
+            <a class="media-left" href="user_path(item.user)">
+              <%= item.user.name %>
+            </a>
+            <div class="media-body">
+              <%= image_tag item.picture.url if item.picture? %>
+              <%= item.content %>
+            </div>
+          </div>
+        <% end %>
+      </ol>
+    </div>
+    <%= paginate @items %>
+  <% end %>

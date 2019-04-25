@@ -1,0 +1,11 @@
+<div class="item">
+  <%= link_to  item.user.name, item.user %>
+  <span class="content"><%= item.content %>
+    <%= image_tag item.picture.url if item.picture? %>
+  </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(item.created_at) %> ago.
+      <%= link_to "削除", item, method: :delete,
+                  class: "btn btn-primary", data: { confirm: "よろしいですか？？" } %>
+  </span>
+</div>
