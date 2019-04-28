@@ -1,14 +1,26 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!
-  before_action :correct_user,   only: :destroy
+  before_action :correct_item, only: :destroy
 
   def index
-    @items = Item.all.order('created_at DESC')
+    @items = Item.all.order(created_at: :desc)
     @items = Item.page(params[:page]).per(6)
   end
 
   def show
-    @item = Item.find_by(id: params[:id])
+    @item = Item.find(params[:id])
+    @comment = Comment.new
+    @comments = @item.comments
+  end
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    @item.update!(item_params)
+    redirect_to items_url, notice: "投稿を更新しました。"
   end
 
   def create
@@ -24,18 +36,22 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item.destroy
-    flash[:notice] = "投稿が削除されました"
+    if @item.user == current_user
+      flash[:notice] = "投稿が削除されました" if @item.destroy
+    else
+      flash[:alert] = "投稿の削除に失敗しました"
+    end
     redirect_to request.referrer || user_path
   end
 
-  private
+
+private
 
   def item_params
     params.require(:item).permit(:content,:picture)
   end
 
-  def correct_user
+  def correct_item
     @item = current_user.items.find_by(id: params[:id])
     redirect_to root_url if @item.nil?
   end

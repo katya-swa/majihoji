@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-root 'pages#home'
+  root 'pages#home'
   get  '/about',   to: 'pages#about'
-  get '/users/:id', to: 'users#show', as: 'user'
-  get '/users', to: 'users#index'
-  resources :items, only: %i(create destroy index show)
+  resources :users, only: %i(index show)
+  resources :items, only: %i(create destroy index show edit update) do
+    resources :comments
+  end
 end
