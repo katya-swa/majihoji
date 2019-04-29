@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
   def create
     @item = Item.find(params[:item_id])
-    @comment = @item.comments.build(comment_params)
+    @comment = @item.comments.build
     @comment.user_id = current_user.id
     if @comment.save
       render :index
@@ -15,10 +15,5 @@ class CommentsController < ApplicationController
     if @comment.destroy
       render :index
     end
-  end
-
-  private
-  def comment_params
-    params.require(:comment).permit(:comment_content, :item_id, :user_id)
   end
 end

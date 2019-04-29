@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   get  '/about',   to: 'pages#about'
   resources :users, only: %i(index show)
-  resources :items, only: %i(create destroy index show edit update) do
+  resources :items do
     resources :comments
   end
 end
