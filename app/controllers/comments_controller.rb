@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   def create
     @item = Item.find(params[:item_id])
     @comment = @item.comments.build
+    @comment = Comment.find(params[:content])
     @comment.user_id = current_user.id
     if @comment.save
       render :index

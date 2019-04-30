@@ -1,14 +1,18 @@
 <div class="container">
-  <h1>ユーザー</h1>
+  <%= search_form_for @search  do |f| %>
+    <div class="form-group">
+      <%= f.label :name_cont, "ユーザー検索" %>
+      <%= f.text_field :name_cont, class: "form-control" %>
+    </div>
+    <div class="actions"><%= f.submit "Search" %></div>
+  <% end %>
 
-  <div class="row">
-    <ol class="users">
-      <% @users.each do |user| %>
-        <div class="col-xs-12 col-md-3">
-          <%= link_to user.name, user %>
-        </div>
-      <% end %>
-    </ol>
-  </div>
-  <%= paginate @users %>
+  <h1>ユーザー</h1>
+    <% if @result.any? %>
+      <%= render @result %>
+    <% end %>
+    <% if @result.nil? %>
+      <%= render @users %>
+    <% end %>
+    <%= paginate @users %>
 </div>

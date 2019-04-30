@@ -1,6 +1,6 @@
 <%= form_with(model: [item, comment] ) do |form| %>
   <div>
-    <%= form.text_area :comment_content %>
+    <%= form.text_area :content %>
   </div>
   <div class="actions">
     <%= form.submit "コメントをする", class: "btn btn-primary" %>

@@ -5,6 +5,8 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all.order(created_at: :desc)
     @items = Item.page(params[:page]).per(6)
+    @search = Item.ransack(params[:q])
+    @result = @search.result.page(params[:page]).per(6)
   end
 
   def show

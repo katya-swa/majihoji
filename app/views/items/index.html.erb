@@ -1,15 +1,29 @@
 <div class="container">
+  <%= search_form_for @search  do |f| %>
+    <div class="form-group">
+      <%= f.label :content_cont, "アイテム検索" %>
+      <%= f.text_field :content_cont, class: "form-control" %>
+    </div>
+    <div class="actions"><%= f.submit "Search" %></div>
+  <% end %>
+
   <h1>投稿一覧</h1>
 
   <div class="row">
     <ol class="items">
-      <% @items.each do |item| %>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <%= render item %>
-            </div>
+      <div class="panel panel-default">
+          <div class="panel-body">
+            <% if @result.any? %>
+              <%= render @result %>
+            <% end %>
+
+            <% if @result.nil? %>
+              <ul class="users">
+                <%= render @users %>
+              </ul>
+            <% end %>
           </div>
-      <% end %>
+      </div>
     </ol>
   </div>
   <%= paginate @items %>
