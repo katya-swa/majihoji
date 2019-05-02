@@ -7,6 +7,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.3'
 gem 'faker',          '1.7.3'
 gem 'kaminari'
+gem 'kaminari-bootstrap'
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 # Use sqlite3 as the database for Active Record
@@ -73,3 +74,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem "bootstrap-sass", ">= 3.4.1"
 gem 'ransack'
+gem 'rails_admin', '~> 1.3'
+gem 'cancancan', '~> 2.0'
+gem 'rails-i18n'

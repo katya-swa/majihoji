@@ -3,14 +3,14 @@
 # incrementally modify your database, and then regenerate this schema definition.
 #
 # Note that this schema.rb definition is the authoritative source for your
-# database schema. If you need to index the application database on another
+# database schema. If you need to create the application database on another
 # system, you should be using db:schema:load, not running all the migrations
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_28_070052) do
+ActiveRecord::Schema.define(version: 2019_05_02_012449) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "item_id", null: false
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_04_28_070052) do
     t.datetime "updated_at", null: false
     t.string "name", default: "", null: false
     t.boolean "admin", default: false
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

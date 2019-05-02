@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :items, dependent: :destroy
   has_many :comments, dependent: :destroy
+  mount_uploader :avatar, AvatarUploader
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -12,5 +13,13 @@ class User < ApplicationRecord
 
   def feed
     Item.where("user_id = ?", id)
+  end
+
+  private
+
+  def avatar_size
+    if avatar.size > 5.megabytes
+      errors.add(:avatar, "5MB以下にしてください")
+    end
   end
 end
