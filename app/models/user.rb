@@ -15,11 +15,4 @@ class User < ApplicationRecord
     Item.where("user_id = ?", id)
   end
 
-  private
-
-  def avatar_size
-    if avatar.size > 5.megabytes
-      errors.add(:avatar, "5MB以下にしてください")
-    end
-  end
 end

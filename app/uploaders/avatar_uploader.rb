@@ -2,10 +2,16 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
    include CarrierWave::MiniMagick
+   process resize_to_limit: [250, 250]
 
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
+   if Rails.env.production?
+     storage :fog
+   else
+     storage :file
+   end
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -28,9 +34,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  # デフォルト画像は700x700に収まるようリサイズ
-   process :resize_to_limit => [700, 700]
-
   # Create different versions of your uploaded files:
    version :thumb do
      process resize_to_fit: [50, 50]
@@ -44,7 +47,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
-   def filename
-     "something.jpg" if original_filename
-   end
+   #def filename
+    # "something.jpg" if original_filename
+   #end
 end

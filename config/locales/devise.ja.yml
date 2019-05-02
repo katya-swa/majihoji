@@ -63,3 +63,4 @@ ja:
         password_confirmation: パスワード確認
         current_password: 現在のパスワード
         email: メールアドレス
+        avatar: プロフィール画像
