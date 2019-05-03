@@ -1,20 +1,27 @@
 <div class="container">
   <div class="user_info">
     <h3><%= @user.name %></h3>
-        <div class="circle-avatar">
+
+    <div class="circle-avatar">
+      <% if @user == current_user %>
           <% if current_user.persisted? && current_user.avatar? %>
-            <%= image_tag current_user.avatar %>
+            <%= image_tag current_user.avatar.to_s %>
           <% else %>
             <%= image_tag 'no_avatar.png' %>
           <% end %>
-        </div>
+      <% else %>
+        <%= image_tag 'no_avatar.png' %>
+      <% end %>
+    </div>
+
     <% if @user == current_user %>
-        <%= button_to '編集',edit_user_registration_path , method: :get, :class => "btn btn-primary" %>
-        <%= button_to '投稿する',root_path , method: :get, :class => "btn btn-primary" %>
-      <% end %>
-      <% if current_user.try(:admin?) %>
-        <%= button_to '管理画面', rails_admin_path  , method: :get, :class => "btn btn-primary" %>
-      <% end %>
+      <%= button_to '編集',edit_user_registration_path , method: :get, :class => "btn btn-primary" %>
+      <%= button_to '投稿する',root_path , method: :get, :class => "btn btn-primary" %>
+    <% end %>
+
+    <% if current_user.try(:admin?) %>
+      <%= button_to '管理画面', rails_admin_path  , method: :get, :class => "btn btn-primary" %>
+    <% end %>
   </div>
 
   <br>
