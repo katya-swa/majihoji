@@ -4,14 +4,14 @@ class CommentsController < ApplicationController
   def create
     @item = Item.find(params[:item_id])
     @comment = @item.comments.build(comment_params)
-    @comment.user_id = current_user.id
+    @comment.user = current_user
     if @comment.save
       render :index
     end
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
+    @comment = current_user.comments.find(params[:id])
     if @comment.destroy
       render :index
     end

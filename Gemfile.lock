@@ -469,6 +469,7 @@ DEPENDENCIES
   devise
   faker (= 1.7.3)
   fog (= 1.42)
+  font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails (= 4.3.1)
   kaminari
