@@ -9,15 +9,15 @@
     </ol>
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-      <div class="item active"> <img src="images/slider/slid1.jpg" alt="Chania">
+      <div class="item active"> <img src="/images/slider/slid1.jpg" alt="Chania">
         <div class="carousel-caption">
           <h3>Majihojiへようこそ!</h3>
           <p>Majihojiはメンズ化粧品の共有サイトです</p>
         </div>
       </div>
-      <div class="item"> <img src="images/slider/slid2.jpg" alt="Chania">
+      <div class="item"> <img src="/images/slider/slid2.jpg" alt="Chania">
         <div class="carousel-caption">
-          <h3>新規登録をして、アイテムを共有しよう！</h3>
+          <h3>新規登録してアイテムを共有しよう！</h3>
           <p>登録済みユーザーの方はログインボタンをクリック</p>
         </div>
       </div>
@@ -31,88 +31,91 @@
 <section id="portfolio" class="section portfolio">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-6 portfolio-item"> <a href="work-details.html" class="portfolio-link">
-        <div class="caption">
-          <div class="caption-content">
-            <h3>投稿の詳細を見る</h3>
-            <h4>Branding/Graphic</h4>
-          </div>
+      <div class="col-sm-6 portfolio-item">
+        <div class="portfolio-link">
+          <%= link_to(item_path(@items)) do %>
+            <div class="caption">
+              <div class="caption-content">
+                <h3>投稿の詳細を見る</h3>
+              </div>
+            </div>
+            <%= image_tag @items.picture.url if @items.picture? %>
+            <%= @items.content %>
+          <% end %>
         </div>
-        <img src="images/portfolio/work-1.jpg" class="img-responsive" alt=""> </a> </div>
-      <div class="col-sm-6 portfolio-item"> <a href="work-details.html" class="portfolio-link">
-        <div class="caption">
-          <div class="caption-content">
-            <h3>投稿の詳細を見る</h3>
-            <h4>Branding</h4>
-          </div>
+      </div>
+
+      <div class="col-sm-6 portfolio-item">
+        <div class="portfolio-link">
+          <%= link_to(item_path(@items)) do %>
+            <div class="caption">
+              <div class="caption-content">
+                <h3>投稿の詳細を見る</h3>
+              </div>
+            </div>
+            <%= image_tag @items.picture.url if @items.picture? %>
+            <%= @items.content %>
+          <% end %>
         </div>
-        <img src="images/portfolio/work-2.jpg" class="img-responsive" alt=""> </a> </div>
-      <div class="col-sm-6 portfolio-item"> <a href="work-details.html" class="portfolio-link">
-        <div class="caption">
-          <div class="caption-content">
-            <h3>投稿の詳細を見る</h3>
-            <h4>Branding</h4>
-          </div>
+      </div>
+
+      <div class="col-sm-6 portfolio-item">
+        <div class="portfolio-link">
+          <%= link_to(item_path(@items)) do %>
+            <div class="caption">
+              <div class="caption-content">
+                <h3>投稿の詳細を見る</h3>
+              </div>
+            </div>
+            <%= image_tag @items.picture.url if @items.picture? %>
+            <%= @items.content %>
+          <% end %>
         </div>
-        <img src="images/portfolio/work-3.jpg" class="img-responsive" alt=""> </a> </div>
-      <div class="col-sm-6 portfolio-item"> <a href="work-details.html" class="portfolio-link">
-        <div class="caption">
-          <div class="caption-content">
-            <h3>投稿の詳細を見る</h3>
-            <h4>Branding</h4>
-          </div>
+      </div>
+
+      <div class="col-sm-6 portfolio-item">
+        <div class="portfolio-link">
+          <%= link_to(item_path(@items)) do %>
+            <div class="caption">
+              <div class="caption-content">
+                <h3>投稿の詳細を見る</h3>
+              </div>
+            </div>
+            <%= image_tag @items.picture.url if @items.picture? %>
+            <%= @items.content %>
+          <% end %>
         </div>
-        <img src="images/portfolio/work-4.jpg" class="img-responsive" alt=""> </a> </div>
-      <div class="col-sm-6 portfolio-item"> <a href="work-details.html" class="portfolio-link">
-        <div class="caption">
-          <div class="caption-content">
-            <h3>投稿の詳細を見る</h3>
-            <h4>Branding</h4>
+      </div>
+
+      <div class="col-sm-6 portfolio-item"><div class="portfolio-link">
+        <%= link_to(item_path(@items)) do %>
+          <div class="caption">
+            <div class="caption-content">
+              <h3>投稿の詳細を見る</h3>
+            </div>
           </div>
+          <%= image_tag @items.picture.url if @items.picture? %>
+          <%= @items.content %>
+        <% end %>
+      </div>
+      </div>
+
+      <div class="col-sm-6 portfolio-item">
+        <div class="portfolio-link">
+          <%= link_to(item_path(@items)) do %>
+            <div class="caption">
+              <div class="caption-content">
+                <h3>投稿の詳細を見る</h3>
+              </div>
+            </div>
+            <%= image_tag @items.picture.url if @items.picture? %>
+            <%= @items.content %>
+          <% end %>
         </div>
-        <img src="images/portfolio/work-5.jpg" class="img-responsive" alt=""> </a> </div>
-      <div class="col-sm-6 portfolio-item"> <a href="work-details.html" class="portfolio-link">
-        <div class="caption">
-          <div class="caption-content">
-            <h3>投稿の詳細をみる</h3>
-            <h4>Branding</h4>
-          </div>
-        </div>
-        <img src="images/portfolio/work-6.jpg" class="img-responsive" alt=""> </a> </div>
+      </div>
     </div>
   </div>
 </section>
 <!-- portfolio grid section -->
 
-<!-- footer section -->
-<footer id="contact" class="footer">
-  <div class="container-fluid">
-    <div class="col-md-2 left">
-      <h2><a class="logo" href="#">Majihoji</a></h2>
-    </div>
-    <div class="col-md-2 left">
-      <h4>Contact</h4>
-      <p>Email : <a href="mailto:hello@agency.com"> hello@agency.com </a></p>
-    </div>
-    <div class="col-md-2 left">
-      <h4>SNS</h4>
-      <ul class="footer-share">
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-      </ul>
-    </div>
-    <div class="col-md-6 right">
-      <p>© 2019 All rights reserved. All Rights Reserved<br>
-      <p>Kanta Nakamura</p>
-    </div>
-  </div>
-</footer>
-<!-- footer section -->
 
-<!-- JS FILES -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/retina.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/main.js"></script>

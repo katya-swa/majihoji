@@ -6,6 +6,6 @@ class  UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    @items = @user.items.page(params[:page]).per(12)
+    @items = @user.items.page(params[:page]).per(6)
   end
 end

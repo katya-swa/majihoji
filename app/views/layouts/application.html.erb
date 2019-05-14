@@ -5,46 +5,79 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Majihoji</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag    'application', media: 'all',
                                'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application',
                                'data-turbolinks-track': 'reload' %>
-      <meta charset="utf-8">
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Majihoji</title>
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/flexslider.css">
-      <link rel="stylesheet" href="css/main.css">
-      <link rel="stylesheet" href="css/responsive.css">
-      <link rel="stylesheet" href="css/animate.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <!-- Header Section -->
     <section class="tophead" role="tophead">
       <!-- Navigation Section -->
       <header id="header">
-        <div class="header-content clearfix"> <a class="logo" href="#">Majihoji</a>
+        <div class="header-content clearfix"> <a class="logo" href="/">Majihoji</a>
           <nav class="navigation" role="navigation">
             <ul class="primary-nav">
-              <li><a href="#header-slider">Majihojiとは</a></li>
-              <li><a href="#services">投稿一覧</a></li>
-              <li><a href="#portfolio">ユーザ一覧</a></li>
-              <li><a href="#testimonials">ログイン</a></li>
-              <li><a href="#contact">新規登録</a></li>
+              <li><%= link_to "Majihojiについて",about_path %></li>
+              <li><%= link_to "投稿一覧",   items_path %></li>
+              <li><%= link_to "ユーザー覧", users_path %></li>
+              <% if user_signed_in? %>
+                <li><%= link_to "マイページ", user_path(current_user) %></li>
+                <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to '新規登録', new_user_registration_path %></li>
+                <li><%= link_to 'ログイン', new_user_session_path %></li>
+              <% end %>
             </ul>
           </nav>
-          <a href="#" class="nav-toggle">メニュー<span></span></a> </div>
+        </div>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
       </header>
       <!-- Navigation Section -->
     </section>
     <!-- Header Section -->
 
     <div class="container">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       <%= yield %>
+      <!-- footer section -->
+      <footer id="contact" class="footer">
+        <div class="container-fluid">
+          <div class="col-md-2 left">
+            <h2><a class="logo" href="#">Majihoji</a></h2>
+          </div>
+          <div class="col-md-6 right">
+            <p>© 2019 All rights reserved. All Rights Reserved<br>
+            <p>Kanta Nakamura</p>
+          </div>
+        </div>
+      </footer>
+      <!-- footer section -->
+
+      <!-- JS FILES -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="js/jquery.flexslider-min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/retina.min.js"></script>
+      <script src="js/modernizr.js"></script>
+      <script src="js/main.js"></script>
+      <!-- JS FILES -->
     </div>
   </body>
 </html>

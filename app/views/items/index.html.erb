@@ -1,4 +1,7 @@
 <div class="container">
+  <br>
+  <br>
+  <br>
   <%= search_form_for @search  do |f| %>
     <div class="form-group">
       <%= f.label :content_cont, "アイテム検索" %>
@@ -15,12 +18,8 @@
           <div class="panel-body">
             <% if @result.any? %>
               <%= render @result %>
-            <% end %>
-
-            <% if @result.nil? %>
-              <ul class="users">
-                <%= render @users %>
-              </ul>
+            <% else %>
+              <%= render @items %>
             <% end %>
           </div>
       </div>

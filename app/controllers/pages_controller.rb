@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   def home
     if user_signed_in?
       @item  = current_user.items.build
-      @items = Item.all.order('created_at DESC')
-      @feed_items = current_user.feed.page(params[:page]).per(12)
+      @items = Item.find(29221)
+      @feed_items = current_user.feed.page(params[:page]).per(6)
     end
   end
 
