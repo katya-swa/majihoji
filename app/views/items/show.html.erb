@@ -1,28 +1,32 @@
+<br>
+<br>
+<br>
 <div class="row">
-  <ol class="items">
-      <div class="media">
-        <a class="media-left" href="user_path(item.user)">
-          <%= @item.user.name %>
-        </a>
-        <div class="media-body">
-          <%= image_tag @item.picture.url if @item.picture? %>
-          <%= @item.content %>
-          <% if @item.user == current_user %>
-            <%= link_to '編集', edit_item_path , class: 'btn btn-primary mr-3' %>
-            <%= link_to '削除', @item, method: :delete, data: { confirm: "投稿を削除してもよろしいですか？"},
-                class: "btn btn-primary mr-3" %>
-            <br>
-            <div>
-              <h4>コメント</h4>
-              <div id="comments_area">
-                <%= render partial: 'comments/index', locals: {comments: @comments } %>
-              </div>
-              <% if user_signed_in? %>
-                <%= render partial: 'comments/form', locals: { comment: @comment, item: @item } %>
-              <% end %>
-            </div>
+  <div class="media">
+    <a class="media-left" href="user_path(item.user)">
+      <%= @item.user.name %>
+    </a>
+    <div class="media-body">
+      <ol class="items">
+        <%= image_tag @item.picture.url if @item.picture? %>
+        <br>
+        <%= @item.content %>
+      </ol>
+      <% if @item.user == current_user %>
+        <%= link_to '編集', edit_item_path , class: 'btn btn-primary mr-3' %>
+        <%= link_to '削除', @item, method: :delete, data: { confirm: "投稿を削除してもよろしいですか？"},
+            class: "btn btn-primary mr-3" %>
+        <br>
+        <div>
+          <h4>コメント</h4>
+          <div id="comments_area">
+            <%= render partial: 'comments/index', locals: {comments: @comments } %>
+          </div>
+          <% if user_signed_in? %>
+            <%= render partial: 'comments/form', locals: { comment: @comment, item: @item } %>
           <% end %>
         </div>
-      </div>
-  </ol>
+      <% end %>
+    </div>
+  </div>
 </div>

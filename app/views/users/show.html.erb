@@ -15,10 +15,8 @@
     </div>
 
     <% if @user == current_user %>
-      <%= button_to '編集',edit_user_registration_path , method: :get, :class => "btn btn-primary" %>
-      <%= button_to '投稿する',root_path , method: :get, :class => "btn btn-primary" %>
+      <%= button_to 'プロフィール編集',edit_user_registration_path , method: :get, :class => "btn btn-primary" %>
     <% end %>
-
     <% if current_user.try(:admin?) %>
       <%= button_to '管理画面', rails_admin_path  , method: :get, :class => "btn btn-primary" %>
     <% end %>
