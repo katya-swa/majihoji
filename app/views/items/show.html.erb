@@ -3,9 +3,13 @@
 <br>
 <div class="row">
   <div class="media">
-    <a class="media-left" href="user_path(item.user)">
-      <%= @item.user.name %>
-    </a>
+    <% if user_signed_in? %>
+      <a class="media-left" href="user_path(item.user)">
+        <%= @item.user.name %>
+      </a>
+    <% else %>
+      <h2>@item.user.name</h2>
+    <% end %>
     <div class="media-body">
       <ol class="items">
         <%= image_tag @item.picture.url if @item.picture? %>
