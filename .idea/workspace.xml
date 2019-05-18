@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="413bc07f-2d3b-4abd-95a2-579b92e2d7de" name="Default Changelist" comment="" />
+    <list default="true" id="413bc07f-2d3b-4abd-95a2-579b92e2d7de" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -84,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="46" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="46" />
+            <state relative-caret-position="304">
+              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -117,7 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/comment.rb" />
         <option value="$PROJECT_DIR$/app/views/comments/_index.html.erb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/app/views/comments/index.js.erb" />
@@ -168,6 +169,7 @@
         <option value="$PROJECT_DIR$/config/initializers/carrier_wave.rb" />
         <option value="$PROJECT_DIR$/config/storage.yml" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
       </list>
     </option>
   </component>
@@ -564,12 +566,12 @@
       <workItem from="1555318622795" duration="120785000" />
       <workItem from="1557201251632" duration="3209000" />
       <workItem from="1557207652631" duration="10957000" />
-      <workItem from="1557560636266" duration="34942000" />
+      <workItem from="1557560636266" duration="35502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183012000" />
+    <option name="totallyTimeSpent" value="183572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1680" height="1027" extended-state="6" />
@@ -884,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="46" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="46" />
+        <state relative-caret-position="304">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
         </state>
       </provider>
     </entry>
