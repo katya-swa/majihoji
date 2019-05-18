@@ -19,11 +19,11 @@
             <% if @result.any? %>
               <%= render @result %>
             <% else %>
-              <%= render @items %>
+              <p>投稿がヒットしませんでした。</p>
             <% end %>
           </div>
       </div>
     </ol>
   </div>
-  <%= paginate @items %>
+  <%= paginate @result %>
 </div>
