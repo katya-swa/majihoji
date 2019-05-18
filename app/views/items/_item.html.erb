@@ -1,7 +1,11 @@
 <div class="items">
   <div class="panel panel-default">
     <div class="panel-body">
-      <%= link_to  item.user.name, item.user %>
+      <% if user_signed_in? %>
+        <%= link_to  item.user.name, item.user %>
+      <% else %>
+        <h2>item.user.name</h2>
+      <% end %>
       <span class="content">
         <%= item.content %>
         <%= link_to(item_path(item)) do %>
