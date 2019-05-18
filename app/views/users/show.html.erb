@@ -28,7 +28,7 @@
   <% if @user.items.any? %>
     <div class="row">
       <ol class="items">
-        <% @user.items.each do |item| %>
+        <% @items.each do |item| %>
           <div class="panel panel-default">
             <div class="panel-body">
               <%= render item %>
