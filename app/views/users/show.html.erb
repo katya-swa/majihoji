@@ -7,10 +7,10 @@
           <% if current_user.persisted? && current_user.avatar? %>
             <%= image_tag current_user.avatar.to_s %>
           <% else %>
-            <img src="/images/no_avatar.png" alt="Chania">
+            <img src="/images/no_avatar.jpg" alt="Chania">
           <% end %>
       <% else %>
-        <img src="/images/no_avatar.png" alt="Chania">
+        <img src="/images/no_avatar.jpg" alt="Chania">
       <% end %>
     </div>
 
