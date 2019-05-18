@@ -8,8 +8,6 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
-
-
 section {
   overflow: auto;
 }
@@ -51,6 +49,10 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+p.photo-center {
+  text-align:center;
 }
 
 /* header */
