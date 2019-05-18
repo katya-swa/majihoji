@@ -83,11 +83,6 @@ p {
   margin-bottom: 1rem;
 }
 
-.photo-center img {
-  display: block;
-  margin:auto;
-}
-
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
