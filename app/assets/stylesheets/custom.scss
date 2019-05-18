@@ -51,8 +51,9 @@ p {
   line-height: 1.7em;
 }
 
-p.photo-center {
-  text-align:center;
+.photo-center img {
+  display: block;
+  margin:auto;
 }
 
 /* header */
