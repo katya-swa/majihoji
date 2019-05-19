@@ -2,31 +2,33 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <%= link_to  item.user.name, item.user %>
-        <% if @user.avatar %>
-          <%= image_tag @user.avatar %>
+      <% @users.each do |user| %>
+        <% if user.avatar %>
+          <%= image_tag "/uploads/user/#{user.avatar}" %>
         <% else %>
           <img src="/images/no_avatar.jpg" alt="Chania">
         <% end %>
-      <span class="content">
-        <%= simple_format(item.content) %>
-        <%= link_to(item_path(item)) do %>
+      <% end %>
+        <span class="content">
+          <%= simple_format(item.content) %>
+          <%= link_to(item_path(item)) do %>
           <%= image_tag item.picture.url if item.picture? %>
-        <% end %>
-      </span>
-      <span class="timestamp">
-         <%= time_ago_in_words(item.created_at) %> 前に投稿されました
-        <% if item.user == current_user %>
-          <%= link_to '編集', edit_item_path(item) , class: 'btn btn-primary' %>
-          <%= link_to "削除", item, method: :delete,
-                      class: "btn btn-primary", data: { confirm: "よろしいですか？？" } %>
+          <% end %>
+        </span>
+        <span class="timestamp">
+           <%= time_ago_in_words(item.created_at) %> 前に投稿されました
+          <% if item.user == current_user %>
+            <%= link_to '編集', edit_item_path(item) , class: 'btn btn-primary' %>
+            <%= link_to "削除", item, method: :delete,
+                        class: "btn btn-primary", data: { confirm: "よろしいですか？？" } %>
 
-          <div class="comment">
-          <div class="comment_area" id="comment_area">
-            <%= render 'comments/index', comments: item.comments, item: item %>
+            <div class="comment">
+            <div class="comment_area" id="comment_area">
+              <%= render 'comments/index', comments: item.comments, item: item %>
+            </div>
           </div>
-        </div>
-        <% end %>
-      </span>
+          <% end %>
+        </span>
     </div>
   </div>
 </div>
