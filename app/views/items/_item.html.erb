@@ -3,7 +3,7 @@
     <div class="panel-body">
       <%= link_to  item.user.name, item.user %>
       <span class="content">
-        <%= item.content %>
+        <%= simple_format(item.content) %>
         <%= link_to(item_path(item)) do %>
           <%= image_tag item.picture.url if item.picture? %>
         <% end %>
