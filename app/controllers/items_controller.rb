@@ -1,26 +1,22 @@
 class ItemsController < ApplicationController
   before_action :correct_item, only: :destroy
+  before_action :set_item, only: %i(show edit update)
 
   def index
-    @items = Item.all.order(created_at: :desc)
-    @items = Item.page(params[:page]).per(6)
     @search = Item.ransack(params[:q])
     @result = @search.result.page(params[:page]).per(6)
     @user = User.find(params[:id])
   end
 
   def show
-    @item = Item.find(params[:id])
     @comment = Comment.new
     @comments = @item.comments
   end
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
     @item.update!(item_params)
     redirect_to items_url, notice: "投稿を更新しました。"
   end
@@ -48,6 +44,10 @@ class ItemsController < ApplicationController
 
 
 private
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
 
   def item_params
     params.require(:item).permit(:content,:picture)
