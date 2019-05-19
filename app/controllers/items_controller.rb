@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
     @items = Item.page(params[:page]).per(6)
     @search = Item.ransack(params[:q])
     @result = @search.result.page(params[:page]).per(6)
+    @user = User.find(params[:id])
   end
 
   def show
