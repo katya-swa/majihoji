@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="413bc07f-2d3b-4abd-95a2-579b92e2d7de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/items/_item.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/items/_item.html.erb" afterDir="false" />
-    </list>
+    <list default="true" id="413bc07f-2d3b-4abd-95a2-579b92e2d7de" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -49,10 +46,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/items/_item.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state relative-caret-position="133">
+              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -60,17 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="114">
+              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -173,8 +170,8 @@
         <option value="$PROJECT_DIR$/app/views/items/_item_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/items/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/items_controller.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/items/_item.html.erb" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       </list>
     </option>
   </component>
@@ -232,6 +229,13 @@
               <item name="majihoji" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="majihoji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="majihoji" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -269,6 +273,15 @@
               <item name="uploads" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
               <item name="avatar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="majihoji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="majihoji" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="avatar" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -421,12 +434,12 @@
       <workItem from="1555318622795" duration="120785000" />
       <workItem from="1557201251632" duration="3209000" />
       <workItem from="1557207652631" duration="10957000" />
-      <workItem from="1557560636266" duration="49888000" />
+      <workItem from="1557560636266" duration="50258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197958000" />
+    <option name="totallyTimeSpent" value="198328000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1680" height="1027" extended-state="6" />
@@ -502,13 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -688,15 +694,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="114">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/items/_item.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="133">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
         </state>
       </provider>
     </entry>
