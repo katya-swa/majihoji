@@ -1,12 +1,11 @@
 module ApplicationHelper
-
-  # ページごとの完全なタイトルを返す。
-  def full_title(page_title = '')
-    base_title = "Ruby on Rails Tutorial Sample App"
-    if page_title.empty?
-      base_title
-    else
-      "#{page_title} | #{base_title}"
+  module UserHelper
+    def avatar_for(user)
+      if user.avatar
+        image_tag "/uploads/user/#{user.avatar}"
+      else
+        image_tag "/images/no_avatar.jpg"
+      end
     end
   end
 end

@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
   def index
     @search = Item.ransack(params[:q])
     @result = @search.result.page(params[:page]).per(6)
+    @user = User.find(params[:id])
   end
 
   def show

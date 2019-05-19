@@ -1,6 +1,6 @@
 <%= form_for(@item) do |f| %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "...投稿したいアイテムの写真と紹介文を入れよう！", class: "form-control" %>
+    <%= f.text_area :content, placeholder: "...投稿したいアイテムの写真と紹介文を入れよう！※アイテム紹介文と写真はどちらも必須です", class: "form-control" %>
   </div>
   <span class="picture">
     <%= f.file_field :picture %>

@@ -3,6 +3,7 @@ class Item < ApplicationRecord
   has_many :comments, dependent: :destroy
   default_scope -> { order(created_at: :desc) }
   validates :content, presence: true, length: { maximum: 200 }
+  validates :picture, presence: true
   validate  :picture_size
   mount_uploader :picture, PictureUploader
 
