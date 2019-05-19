@@ -2,13 +2,11 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <%= link_to  item.user.name, item.user %>
-      <% @users.each do |user| %>
         <% if user.avatar %>
           <%= image_tag "/uploads/user/avatar/1/#{user.avatar}" %>
         <% else %>
           <img src="/images/no_avatar.jpg" alt="Chania">
         <% end %>
-      <% end %>
         <span class="content">
           <%= simple_format(item.content) %>
           <%= link_to(item_path(item)) do %>
