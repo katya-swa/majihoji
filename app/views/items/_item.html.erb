@@ -2,7 +2,7 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <%= link_to  item.user.name, item.user %>
-        <% if @user.avatar? %>
+        <% if item.user.avatar? %>
           <%= image_tag item.user.avatar.url %>
         <% else %>
           <img src="/images/no_avatar.jpg" alt="Chania">
