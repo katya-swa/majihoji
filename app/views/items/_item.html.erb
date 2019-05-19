@@ -18,7 +18,7 @@
           <% if item.user == current_user %>
             <%= link_to '編集', edit_item_path(item) , class: 'btn btn-primary' %>
             <%= link_to "削除", item, method: :delete,
-                        class: "btn btn-primary", data: { confirm: "よろしいですか？？" } %>
+                        class: "btn btn-primary", data: { confirm: "削除してもよろしいですか？？" } %>
 
             <div class="comment">
             <div class="comment_area" id="comment_area">

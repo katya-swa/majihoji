@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :correct_item, only: :destroy
   before_action :set_item, only: %i(show edit update)
+  before_action :authenticate_user!, only: %i(index edit update create destroy)
 
   def index
     @search = Item.ransack(params[:q])

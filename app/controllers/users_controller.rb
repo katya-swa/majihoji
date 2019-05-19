@@ -1,7 +1,7 @@
 class  UsersController < ApplicationController
   before_action :authenticate_user!
   def index
-    @users = User.page(params[:page]).per(12)
+    @users = User.page(params[:page]).per(16)
   end
 
   def show
