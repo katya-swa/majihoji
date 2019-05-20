@@ -1,28 +1,33 @@
 <br>
 <br>
 <br>
-<div class="row">
-  <div class="media">
-    <% if user_signed_in? %>
-      <a class="media-left" href="<%= user_path(@item.user) %>">
+<div class="items">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="circle-avatar">
+        <% if @item.user.avatar? %>
+          <%= image_tag @item.user.avatar.url %>
+        <% else %>
+          <img src="/images/no_avatar.jpg" alt="Chania">
+        <% end %>
+      </div>
+      <% if user_signed_in? %>
+        <%= link_to  @item.user.name, @item.user %>
+      <% else %>
         <%= @item.user.name %>
-      </a>
-    <% else %>
-      <%= @item.user.name %>
-    <% end %>
-    <div class="media-body">
-      <ol class="items">
-        <%= image_tag @item.picture.url if @item.picture? %>
-        <br>
-        <%= @item.content %>
-      </ol>
-      <% if @item.user == current_user %>
-        <%= link_to '編集', edit_item_path , class: 'btn btn-primary mr-3' %>
-        <%= link_to '削除', @item, method: :delete, data: { confirm: "投稿を削除してもよろしいですか？"},
-            class: "btn btn-primary mr-3" %>
-        <br>
-        <div>
-          <h4>コメント</h4>
+      <% end %>
+
+      <%= simple_format(@item.content) %>
+      <%= image_tag @item.picture.url if @item.picture? %>
+
+      <span class="timestamp">
+       <%= time_ago_in_words(item.created_at) %> 前に投稿されました
+        <% if @item.user == current_user %>
+          <%= link_to '編集', edit_item_path , class: 'btn btn-primary mr-3' %>
+          <%= link_to '削除', @item, method: :delete, data: { confirm: "投稿を削除してもよろしいですか？"},
+                      class: "btn btn-primary mr-3" %>
+        <% end %>
+        <div class="comment">
           <div id="comments_area">
             <%= render partial: 'comments/index', locals: {comments: @comments } %>
           </div>
@@ -30,7 +35,7 @@
             <%= render partial: 'comments/form', locals: { comment: @comment, item: @item } %>
           <% end %>
         </div>
-      <% end %>
+      </span>
     </div>
   </div>
 </div>
