@@ -11,7 +11,7 @@
     </div>
 
     <% if @user == current_user %>
-      <%= button_to 'プロフィール編集',edit_user_registration_path , method: :get, :class => "btn btn-primary" %>
+      <%= button_to 'プロフィール変更',edit_user_registration_path , method: :get, :class => "btn btn-primary" %>
       <%= button_to '投稿画面',root_path , method: :get, :class => "btn btn-primary" %>
     <% end %>
     <% if @user == current_user.try(:admin?) %>
