@@ -15,20 +15,19 @@
       <%= link_to(item_path(item)) do %>
         <%= image_tag item.picture.url if item.picture? %>
       <% end %>
+      <% if item.user == current_user %>
+        <%= link_to '編集', edit_item_path(item) , class: 'btn btn-primary' %>
+        <%= link_to "削除", item, method: :delete,
+                    class: "btn btn-primary", data: { confirm: "削除してもよろしいですか？？" } %>
+      <% end %>
       <span class="timestamp">
-         <%= time_ago_in_words(item.created_at) %> 前に投稿されました
-        <% if item.user == current_user %>
-          <%= link_to '編集', edit_item_path(item) , class: 'btn btn-primary' %>
-          <%= link_to "削除", item, method: :delete,
-                      class: "btn btn-primary", data: { confirm: "削除してもよろしいですか？？" } %>
-
-          <div class="comment">
-            <div class="comment_area" id="comment_area">
-              <%= render 'comments/index', comments: item.comments, item: item %>
-            </div>
-          </div>
-        <% end %>
+        <%= time_ago_in_words(item.created_at) %> 前に投稿されました
       </span>
+      <div class="comment">
+        <div class="comment_area" id="comment_area">
+          <%= render 'comments/index', comments: item.comments, item: item %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
