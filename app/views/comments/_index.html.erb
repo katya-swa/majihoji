@@ -1,4 +1,4 @@
-<div class="comment">
+<div class="comments">
   <% comments.each do |comment| %>
     <% unless comment.id.nil? %>
       <%= link_to "#{comment.user.name}さん", user_path(comment.user) %>
