@@ -22,7 +22,7 @@
       <%= image_tag @item.picture.url if @item.picture? %>
 
       <span class="timestamp">
-       <%= time_ago_in_words(item.created_at) %> 前に投稿されました
+       <%= time_ago_in_words(@item.created_at) %> 前に投稿されました
         <% if @item.user == current_user %>
           <%= link_to '編集', edit_item_path , class: 'btn btn-primary mr-3' %>
           <%= link_to '削除', @item, method: :delete, data: { confirm: "投稿を削除してもよろしいですか？"},
