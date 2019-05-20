@@ -13,7 +13,7 @@
         <%= simple_format(item.content) %>
       </span>
       <%= link_to(item_path(item)) do %>
-        <%= image_tag item.picture.url %>
+        <%= image_tag item.picture.url if item.picture? %>
       <% end %>
       <span class="timestamp">
          <%= time_ago_in_words(item.created_at) %> 前に投稿されました
