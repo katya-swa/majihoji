@@ -22,34 +22,7 @@
                                'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <!-- Header Section -->
-    <section class="tophead" role="tophead">
-      <!-- Navigation Section -->
-      <header id="header">
-        <div class="header-content clearfix"> <a class="logo" href="/">Majihoji</a>
-          <nav class="navigation" role="navigation">
-            <ul class="primary-nav">
-              <li><%= link_to "Majihojiについて",about_path %></li>
-              <li><%= link_to "投稿一覧",   items_path %></li>
-              <li><%= link_to "ユーザー覧", users_path %></li>
-              <% if user_signed_in? %>
-                <li><%= link_to "マイページ", user_path(current_user) %></li>
-                <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
-                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-              <% else %>
-                <li><%= link_to '新規登録', new_user_registration_path %></li>
-                <li><%= link_to 'ログイン', new_user_session_path %></li>
-              <% end %>
-            </ul>
-          </nav>
-        </div>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-      </header>
-      <!-- Navigation Section -->
-    </section>
-    <!-- Header Section -->
-
+    <%= render 'layouts/header' %>
     <div class="container">
       <br>
       <br>
@@ -57,16 +30,7 @@
       <br>
       <br>
       <%= yield %>
-
-      <!-- footer section -->
-      <footer id="footer">
-        <li><%= link_to "Majihoji", '/', id: "logo" %></li>
-        <ul>
-          <li>© 2019 All rights reserved. All Rights Reserved</li>
-          <li>Kanta Nakamura</li>
-        </ul>
-      </footer>
-      <!-- footer section -->
+      <%= render 'layouts/footer' %>
 
       <!-- JS FILES -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
