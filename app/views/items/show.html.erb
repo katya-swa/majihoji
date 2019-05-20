@@ -5,10 +5,10 @@
   <div class="media">
     <% if user_signed_in? %>
       <a class="media-left" href="<%= user_path(@item.user) %>">
-        <%= @item.user %>
+        <%= @item.user.name %>
       </a>
     <% else %>
-      <%= @item.user %>
+      <%= @item.user.name %>
     <% end %>
     <div class="media-body">
       <ol class="items">
