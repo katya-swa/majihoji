@@ -16,8 +16,9 @@
       <% else %>
         <%= @item.user.name %>
       <% end %>
-
-      <%= simple_format(@item.content) %>
+      <span class="content">
+        <%= simple_format(@item.content) %>
+      </span>
       <%= image_tag @item.picture.url if @item.picture? %>
 
       <span class="timestamp">

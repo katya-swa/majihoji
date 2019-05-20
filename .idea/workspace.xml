@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="413bc07f-2d3b-4abd-95a2-579b92e2d7de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/items/_item.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/items/_item.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/items/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/items/show.html.erb" afterDir="false" />
-    </list>
+    <list default="true" id="413bc07f-2d3b-4abd-95a2-579b92e2d7de" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -65,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/items/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+            <state relative-caret-position="684">
+              <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -412,12 +408,12 @@
       <workItem from="1555318622795" duration="120785000" />
       <workItem from="1557201251632" duration="3209000" />
       <workItem from="1557207652631" duration="10957000" />
-      <workItem from="1557560636266" duration="59201000" />
+      <workItem from="1557560636266" duration="59493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207271000" />
+    <option name="totallyTimeSpent" value="207563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1680" height="1027" extended-state="6" />
@@ -688,13 +684,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/items/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/items/_item.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -702,10 +691,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/items/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/items/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="684">
+          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
         </state>
       </provider>
     </entry>

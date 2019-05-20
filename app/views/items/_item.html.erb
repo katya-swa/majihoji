@@ -11,10 +11,10 @@
       <%= link_to  item.user.name, item.user %>
       <span class="content">
         <%= simple_format(item.content) %>
-        <%= link_to(item_path(item)) do %>
-          <%= image_tag item.picture.url %>
-        <% end %>
       </span>
+      <%= link_to(item_path(item)) do %>
+        <%= image_tag item.picture.url %>
+      <% end %>
       <span class="timestamp">
          <%= time_ago_in_words(item.created_at) %> 前に投稿されました
         <% if item.user == current_user %>
