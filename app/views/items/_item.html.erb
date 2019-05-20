@@ -21,7 +21,6 @@
         <%= link_to "削除", item, method: :delete,
                     class: "btn btn-primary", data: { confirm: "削除してもよろしいですか？？" } %>
       <% end %>
-      <br>
       <span class="timestamp">
         <%= time_ago_in_words(item.created_at) %> 前に投稿されました
       </span>
