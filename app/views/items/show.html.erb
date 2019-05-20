@@ -4,11 +4,11 @@
 <div class="row">
   <div class="media">
     <% if user_signed_in? %>
-      <a class="media-left" href="<%= user_path(item.user) %>">
-        <%= @item.user.name %>
+      <a class="media-left" href="<%= user_path(@item.user) %>">
+        <%= @item.user %>
       </a>
     <% else %>
-      <%= @item.user.name %>
+      <%= @item.user %>
     <% end %>
     <div class="media-body">
       <ol class="items">
