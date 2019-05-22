@@ -1,1 +1,8 @@
+<div class="circle-avatar">
+  <% if user.avatar? %>
+    <%= image_tag user.avatar.url %>
+  <% else %>
+    <img src="/images/no_avatar.jpg" alt="Chania">
+  <% end %>
+</div>
 <%= link_to user.name, user %>
