@@ -11,7 +11,7 @@
             <li><%= link_to "マイページ", user_path(current_user) %></li>
             <li>
               <div class="circle-avatar">
-              <% if user.avatar? %>
+              <% if current_user.avatar? %>
                 <%= image_tag current_user.avatar.url %>
               <% else %>
                 <img src="/images/no_avatar.jpg" alt="Chania">
