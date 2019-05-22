@@ -9,7 +9,16 @@
           <li><%= link_to "ユーザー覧", users_path %></li>
           <% if user_signed_in? %>
             <li><%= link_to "マイページ", user_path(current_user) %></li>
-            <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+            <li>
+              <div class="circle-avatar">
+              <% if user.avatar? %>
+                <%= image_tag user.avatar.url %>
+              <% else %>
+                <img src="/images/no_avatar.jpg" alt="Chania">
+              <% end %>
+              </div>
+              <%= link_to user.name, user %>
+            </li>
             <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <% else %>
             <li><%= link_to '新規登録', new_user_registration_path %></li>
