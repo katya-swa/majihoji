@@ -64,3 +64,4 @@ ja:
         current_password: 現在のパスワード
         email: メールアドレス
         avatar: プロフィール画像
+        remember_me: 次回から自動的にログイン
