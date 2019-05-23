@@ -6,11 +6,13 @@
   <div class="circle-avatar">
     <% if current_user.persisted? && current_user.avatar? %>
       <%= image_tag current_user.avatar.to_s %>
+      <br>
       <label><%= f.check_box :remove_avatar %> 画像を削除</label>
     <% else %>
       <img src="/images/no_avatar.jpg" alt="Chania">
       <%= f.hidden_field :avatar_cache %>
     <% end %>
+    <br>
     <%= f.file_field :avatar %>
   </div>
 
