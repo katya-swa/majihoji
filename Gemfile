@@ -25,6 +25,8 @@ gem 'cancancan', '~> 2.0'
 gem 'rails-i18n'
 gem 'font-awesome-rails'
 gem "aws-sdk-s3", require: false
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
