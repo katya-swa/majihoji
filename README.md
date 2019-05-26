@@ -2,7 +2,7 @@
 
 メンズ化粧品専用のアイテム共有サイトです。
 
-URL https://majihoji.herokuapp.com/
+https://majihoji.herokuapp.com/
 
 要件定義/画面設計まとめページ
 
