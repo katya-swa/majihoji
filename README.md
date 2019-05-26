@@ -29,3 +29,12 @@ https://quip.com/yKhFApgCgaVM
 * ransack
 * Bootstrap
 * Font-awesome
+* PostgreSQL
+* heroku
+
+
+# 今後の追加予定
+
+* RSpec System Spec/Model Spec
+* 投稿タグ付け機能
+* 投稿いいね機能
