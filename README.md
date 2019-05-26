@@ -1,24 +1,31 @@
-# README
+# Majihoji
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+メンズ化粧品専用のアイテム共有サイトです。
 
-Things you may want to cover:
+URL https://majihoji.herokuapp.com/
 
-* Ruby version
+要件定義/画面設計まとめページ
 
-* System dependencies
+https://quip.com/yKhFApgCgaVM
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+#機能一覧
 
-* How to run the test suite
+* ログイン・ログアウト機能
+* 投稿作成/更新/削除機能
+* 投稿一覧機能
+* 投稿検索機能
+* 投稿コメント機能(コメント作成/削除)
+* 画像アップロード機能(Carrierwave/S3へのアップロード)
+* ページネーション機能
 
-* Services (job queues, cache servers, search engines, etc.)
+#主な環境
 
-* Deployment instructions
-
-* ...
+* Ruby 2.5.1
+* Rails 5.2.3
+* devise
+* Git/Github
+* ransack
+* Bootstrap
+* Font-awesome
