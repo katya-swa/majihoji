@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = current_user.comments.find(params[:id])
     if @comment.destroy
-      render :index
+      redirect_to  request.referrer || root_url
     end
   end
 
