@@ -33,5 +33,4 @@
 # アップロードされたテスト画像を無視する
 /public/uploads
 
-/idea
-.idea
+/.idea
