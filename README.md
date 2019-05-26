@@ -20,7 +20,7 @@ https://quip.com/yKhFApgCgaVM
 * 画像アップロード機能(Carrierwave/S3へのアップロード)
 * ページネーション機能
 
-# 環境/使用技術
+# 環境・使用技術
 
 * Ruby 2.5.1
 * Rails 5.2.3
