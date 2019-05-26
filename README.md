@@ -33,7 +33,7 @@ https://quip.com/yKhFApgCgaVM
 * heroku
 
 
-# 今後の追加予定
+# 今後の追加予定機能
 
 * RSpec System Spec/Model Spec
 * 投稿タグ付け機能
