@@ -11,11 +11,7 @@
           <img src="/images/no_avatar.jpg" alt="Chania">
         <% end %>
       </div>
-      <% if user_signed_in? %>
-        <%= link_to  @item.user.name, @item.user %>
-      <% else %>
-        <%= @item.user.name %>
-      <% end %>
+      <%= link_to  @item.user.name, @item.user %>
       <br>
       <span class="content">
         <%= simple_format(@item.content) %>
