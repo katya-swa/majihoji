@@ -10,7 +10,7 @@ https://quip.com/yKhFApgCgaVM
 
 
 
-#機能一覧
+# 機能一覧
 
 * ログイン・ログアウト機能
 * 投稿作成/更新/削除機能
@@ -20,7 +20,7 @@ https://quip.com/yKhFApgCgaVM
 * 画像アップロード機能(Carrierwave/S3へのアップロード)
 * ページネーション機能
 
-#主な環境
+# 主な環境
 
 * Ruby 2.5.1
 * Rails 5.2.3
