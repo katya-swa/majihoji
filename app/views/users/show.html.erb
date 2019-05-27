@@ -14,7 +14,7 @@
       <%= button_to 'プロフィール変更',edit_user_registration_path , method: :get, :class => "btn btn-primary" %>
       <%= button_to '投稿画面',root_path , method: :get, :class => "btn btn-primary" %>
     <% end %>
-    <% if @user == current_user.try(:admin?) %>
+    <% if current_user.try(:admin?) %>
       <%= button_to '管理画面', rails_admin_path  , method: :get, :class => "btn btn-primary" %>
     <% end %>
   </div>
