@@ -5,13 +5,13 @@
   <br>
   <br>
   <div class="row">
-    <div class="user thumbnail">
+    <ol class="users">
       <% @users.each do |user| %>
         <div class="col-12 col-md-3">
           <h4><%= render user %></h4>
         </div>
       <% end %>
-    </div>
+    </ol>
   </div>
     <%= paginate @users %>
 </div>

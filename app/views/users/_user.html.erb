@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="row">
+<li>
+  <div class="user thumbnail">
     <div class="circle-avatar">
       <% if user.avatar? %>
         <%= image_tag user.avatar.url %>
@@ -9,4 +9,4 @@
     </div>
   </div>
   <%= link_to user.name, user %>
-</div>
+</li>
