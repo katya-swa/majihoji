@@ -6,25 +6,8 @@
 
 $gray-medium-light: #eaeaea;
 
-/* universal */
 
-section {
-  overflow: auto;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
-}
-
-/* typography */
+/* font */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -135,9 +118,10 @@ error_explanation {
 /* Users index */
 
 .users {
-  list-style: none;
   margin: 0;
-  padding-top: 10px;
+  li {
+    overflow: auto;
+  }
 }
 
 /* items */
@@ -145,10 +129,6 @@ error_explanation {
 .items {
   list-style: none;
   padding: 0;
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
   .user {
     margin-top: 5em;
     padding-top: 0;
