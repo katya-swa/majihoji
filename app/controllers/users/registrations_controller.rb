@@ -40,7 +40,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
    protected
    def after_update_path_for(resource)
-     edit_user_registration_path
+     user_path(current_user)
    end
 
   # If you have extra params to permit, append them to the sanitizer.
