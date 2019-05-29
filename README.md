@@ -7,7 +7,6 @@ https://majihoji.herokuapp.com/
 ※IDとパスワードはログインページに記載してあります。
 
 
-
 要件定義/画面設計まとめページ
 
 https://quip.com/yKhFApgCgaVM
