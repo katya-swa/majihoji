@@ -38,12 +38,4 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
-   config.model 'User' do
-     LABEL_id = 'ユーザID'
-     LABEL_email = 'メールアドレス'
-     LABEL_admin = '管理者フラグ'
-     LABEL_role = '権限'
-     LABEL_created_at = '作成日時'
-     LABEL_updated_at = '更新日時'
-   end
 end

@@ -50,7 +50,7 @@ private
   end
 
   def item_params
-    params.require(:item).permit(:content,:picture)
+    params.require(:item).permit(:content, :picture, :tag_list)
   end
 
   def correct_item
