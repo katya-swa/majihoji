@@ -5,7 +5,7 @@
   </div>
   <div class="field">
     <%= f.label :tag_list %>
-    <%= f.text_field :tag_list, value: @item.tag_list.join(','), class: "form-control" %>
+    <%= f.text_field_tag 'item[tag_list]', item.tag_list.join(','), class: "form-control" %>
   </div>
   <span class="picture">
     <%= f.file_field :picture %>
