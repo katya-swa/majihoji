@@ -18,6 +18,7 @@
       <% end %>
       <br>
       <%= render 'items/tag_list', tag_list: item.tag_list %>
+      <br>
 
       <% if item.user == current_user %>
         <%= link_to '編集', edit_item_path(item) , class: 'btn btn-primary' %>

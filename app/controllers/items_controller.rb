@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
   def index
     @search = Item.ransack(params[:q])
     @result = @search.result.page(params[:page]).per(6)
+    @tag_search = Item.tagged_with(params[:tag_list_cont], :any => true)
   end
 
   def show

@@ -4,8 +4,8 @@
                     class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :tag_list %>
-    <%= f.text_field_tag 'item[tag_list]', @item.tag_list.join(','), class: "form-control" %>
+    <%= f.label :tag_list, "タグ( ,で区切り複数登録可能)" %>
+    <%= f.text_field :tag_list, value: @item.tag_list.join(','), class: "form-control" %>
   </div>
   <span class="picture">
     <%= f.file_field :picture %>
