@@ -1,10 +1,10 @@
 <%= form_for(@item) do |f| %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "...投稿したいアイテムの写真と紹介文を入れよう！※アイテム紹介文と写真はどちらも必須です",
+    <%= f.text_area :content, placeholder: "...投稿したいアイテムの写真と紹介文を入れよう！!※※アイテム紹介文と写真はどちらも必須です(タグ登録は任意)※※",
                     class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :tag_list, "タグ( ,で区切り複数登録可能)" %>
+    <%= f.label :tag_list, "タグ登録( ,で区切り複数登録可能)" %>
     <%= f.text_field :tag_list, value: @item.tag_list.join(','), class: "form-control" %>
   </div>
   <span class="picture">

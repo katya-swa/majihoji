@@ -11,11 +11,12 @@
     </div>
     <div class="actions"><%= f.submit "キーワード検索する" %></div>
   <% end %>
-  <br>
-  <%= form_tag('/items', :method => :get) do %>
-    <%= text_field_tag :tag_list_cont %>
-    <%= submit_tag 'タグ検索する', class: "form-control" %>
-  <% end %>
+  <div class="form-group">
+    <%= form_tag('/items', :method => :get) do %>
+      <%= text_field_tag :tag_list_cont,'', placeholder: '検索したいタグを入力して下さい', class: "form-control" %>
+      <%= submit_tag 'タグ検索する', class: "form-control" %>
+    <% end %>
+  </div>
   <br>
   <br>
 
@@ -23,12 +24,10 @@
     <ol class="items">
       <div class="panel panel-default">
           <div class="panel-body">
-            <% if @result.any? %>
+            <% if params[:tag_list_cont].blank? %>
               <%= render @result %>
-            <% elsif @tag_search.any? %>
-              <%= render @tag_search %>
             <% else %>
-              <p>投稿がヒットしませんでした。</p>
+              <%= render @tag_search %>
             <% end %>
           </div>
       </div>
