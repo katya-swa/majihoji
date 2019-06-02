@@ -22,6 +22,7 @@ https://quip.com/yKhFApgCgaVM
 * 投稿コメント機能(コメント作成/削除)
 * 画像アップロード機能(Carrierwave/S3へのアップロード)
 * ページネーション機能
+* 投稿タグ付け機能
 
 # 環境・使用技術
 
@@ -39,6 +40,5 @@ https://quip.com/yKhFApgCgaVM
 # 今後の追加予定機能
 
 * RSpec System Spec/Model Spec
-* 投稿タグ付け機能
 * 投稿いいね機能
 * twitter/facebook連携機能
