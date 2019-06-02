@@ -33,5 +33,7 @@
       </div>
     </ol>
   </div>
-  <%= paginate @result %>
+  <% if params[:tag_list_cont].blank? %>
+    <%= paginate @result %>
+  <% end %>
 </div>
