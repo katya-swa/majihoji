@@ -41,4 +41,3 @@ https://quip.com/yKhFApgCgaVM
 
 * RSpec System Spec/Model Spec
 * 投稿いいね機能
-* twitter/facebook連携機能
