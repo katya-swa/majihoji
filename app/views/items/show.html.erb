@@ -21,10 +21,12 @@
       <%= render 'items/tag_list', tag_list: @item.tag_list %>
       <br>
       <h3>いいね件数: <%= @item.likes.count %></h3>
-      <% if current_user.already_liked?(@item) %>
-        <%= button_to 'いいねを取り消す', item_like_path(@item), method: :delete, class: "btn btn-info btn-sm" %>
-      <% else %>
-        <%= button_to 'いいね', item_likes_path(@item), class: "btn btn-info btn-sm" %>
+      <% if user_signed_in? %>
+        <% if current_user.already_liked?(@item) %>
+          <%= button_to 'いいねを取り消す', item_like_path(@item), method: :delete, class: "btn btn-info btn-sm" %>
+        <% else %>
+          <%= button_to 'いいね', item_likes_path(@item), class: "btn btn-info btn-sm" %>
+        <% end %>
       <% end %>
       <h3>いいねしたユーザー</h3>
       <% @item.liked_users.each do |user| %>
