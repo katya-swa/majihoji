@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
     @search = Item.ransack(params[:q])
     @result = @search.result.page(params[:page]).per(6)
     @tag_search = Item.tagged_with(params[:tag_list_cont], :any => true)
+    @like = Like.new
   end
 
   def show
@@ -26,9 +27,8 @@ class ItemsController < ApplicationController
     @item = current_user.items.build(item_params)
     if @item.save
       flash[:notice] = "投稿が作成されました!"
-      redirect_to root_url
+      redirect_to items_path
     else
-      @feed_items = []
       flash[:alert] = "投稿ができませんでした。"
       render "pages/home"
     end

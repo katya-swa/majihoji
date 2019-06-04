@@ -6,6 +6,6 @@ class  UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @items = @user.items.page(params[:page]).per(6)
+    @items = @user.items.page(params[:page]).per(5)
   end
 end

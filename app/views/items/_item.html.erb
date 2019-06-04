@@ -19,6 +19,7 @@
       <br>
       <%= render 'items/tag_list', tag_list: item.tag_list %>
       <br>
+      <h3>いいね件数: <%= item.likes.count %></h3>
 
       <% if item.user == current_user %>
         <%= link_to '編集', edit_item_path(item) , class: 'btn btn-primary' %>

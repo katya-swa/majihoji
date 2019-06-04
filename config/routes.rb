@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :users, only: %i(index show)
   resources :items do
     resources :comments
+    resources :likes, only: [:create, :destroy]
   end
 end

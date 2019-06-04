@@ -22,6 +22,11 @@
 
   <br>
   <br>
+  <% if @user.items.any? %>
+    <h2>マイアイテム一覧</h2>
+  <% else %>
+    <h2>まだ投稿したアイテムはありません</h2>
+  <% end %>
 
   <% if @user.items.any? %>
     <div class="row">
