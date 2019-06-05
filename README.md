@@ -23,6 +23,7 @@ https://quip.com/yKhFApgCgaVM
 * 画像アップロード機能(Carrierwave/S3へのアップロード)
 * ページネーション機能
 * 投稿タグ付け機能
+* 管理ユーザー機能(rails_admin)
 
 # 環境・使用技術
 
@@ -31,6 +32,7 @@ https://quip.com/yKhFApgCgaVM
 * devise
 * Git/Github
 * ransack
+* acts-as-taggable-on
 * Bootstrap
 * Font-awesome
 * PostgreSQL
@@ -40,4 +42,3 @@ https://quip.com/yKhFApgCgaVM
 # 今後の追加予定機能
 
 * RSpec System Spec/Model Spec
-* 投稿いいね機能
