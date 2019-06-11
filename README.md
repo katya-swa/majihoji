@@ -24,6 +24,7 @@ https://quip.com/yKhFApgCgaVM
 * ページネーション機能
 * 投稿タグ付け機能
 * 管理ユーザー機能(rails_admin)
+* 投稿いいね機能
 
 # 環境・使用技術
 
@@ -41,4 +42,12 @@ https://quip.com/yKhFApgCgaVM
 
 # 今後の追加予定機能
 
+* RSpec System Spec/Model Spec
+
+
+# 現在学習している内容
+
+* Docker
+* CircleCI
+* チーム開発(Github)
 * RSpec System Spec/Model Spec
