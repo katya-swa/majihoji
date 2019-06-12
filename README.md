@@ -38,6 +38,7 @@ https://quip.com/yKhFApgCgaVM
 * Font-awesome
 * PostgreSQL
 * heroku
+* rails_admin_import
 
 
 # 今後の追加予定機能
