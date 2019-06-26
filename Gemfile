@@ -33,8 +33,6 @@ gem 'acts-as-taggable-on', '~> 6.0'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'sqlite3'
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -46,9 +44,10 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'rails-controller-testing'
+  gem 'selenium-webdriver'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :production do
