@@ -25,6 +25,7 @@ https://quip.com/yKhFApgCgaVM
 * 投稿タグ付け機能
 * 管理ユーザー機能(rails_admin)
 * 投稿いいね機能
+* RSpec Feature Spec/Model Specの記述
 
 # 環境・使用技術
 
@@ -39,11 +40,11 @@ https://quip.com/yKhFApgCgaVM
 * PostgreSQL
 * heroku
 * rails_admin_import
+* RSpec
 
 
 # 今後の追加予定機能
-
-* RSpec System Spec/Model Spec
+* テストの追記
 
 
 # 現在学習している内容
@@ -51,4 +52,5 @@ https://quip.com/yKhFApgCgaVM
 * Docker
 * CircleCI
 * チーム開発(Github)
-* RSpec System Spec/Model Spec
+* RSpec Feature Spec/Model Spec
+* Qiitaへの記事投稿
