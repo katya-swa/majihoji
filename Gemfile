@@ -48,6 +48,9 @@ group :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+  gem 'paperclip'
+  gem 'rails-controller-testing'
 end
 
 group :production do
