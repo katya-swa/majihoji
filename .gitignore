@@ -35,3 +35,7 @@
 
 #.ideaの追加
 .idea/
+
+# Paperclipによってアップロードされたファイルを無視する
+/public/system
+/spec/test_uploads
