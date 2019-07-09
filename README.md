@@ -45,7 +45,6 @@ https://quip.com/yKhFApgCgaVM
 
 # 今後の追加予定機能
 * フィーチャースペックの追記
-* UIの大まかな変更
 
 
 # 現在学習している内容
@@ -53,5 +52,5 @@ https://quip.com/yKhFApgCgaVM
 * Docker
 * CircleCI
 * チーム開発(Github)
-* RSpec Feature Spec/Model Spec
 * Qiitaへの記事投稿
+* rubyの基礎(チェリー本)
