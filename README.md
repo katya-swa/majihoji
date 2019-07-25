@@ -44,7 +44,7 @@ https://quip.com/yKhFApgCgaVM
 
 
 # 今後の追加予定機能
-* フィーチャースペックの追記
+* herokuからawsへ移行
 
 
 # 現在学習している内容
