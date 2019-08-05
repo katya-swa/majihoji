@@ -42,11 +42,6 @@ https://quip.com/yKhFApgCgaVM
 * rails_admin_import
 * RSpec
 
-
-# 今後の追加予定機能
-* herokuからawsへ移行
-
-
 # 現在学習している内容
 
 * Docker
